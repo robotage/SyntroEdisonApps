@@ -19,13 +19,14 @@ See http://wp.me/p4qcHg-bE for details on how to create the correct environment.
 In addition, SyntroEdisonCam requires that video and audio capture be enabled in the kernel.
 See http://wp.me/p4qcHg-bL on how to do this.
 
-The software requires that the SyntroCore repo be available (although it does not need to be built on the development machine).
+The software requires that the SyntroCore and SyntroApps repos be available (although they do not need to be built on the development machine).
 
 For example, from the home directory:
 
     mkdir SyntroNet
     cd SyntroNet
     git clone git://github.com/richards-tech/SyntroCore
+    git clone git://github.com/richards-tech/SyntroApps
     git clone git://github.com/richards-tech/SyntroEdisonApps
     
 This ensures that they are at the same level in the directory hierarchy.
