@@ -6,4 +6,6 @@ Check out www.richards-tech.com and search for SyntroEdisonNav to find more inst
 
 SyntroEdisonNav uses the RTIMULib IMU library. Check out https://github.com/richards-tech/RTIMULib for more information on the operation of the library and configuration of the system via the RTIMULib.ini settings file.
 
+Note that SyntroEdisonNav uses I2C1 to connect to the IMU chip.
+
 There is no way of performing magnetometer calibration at the moment. This will be in a future release.
