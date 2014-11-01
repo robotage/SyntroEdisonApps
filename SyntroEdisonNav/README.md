@@ -8,4 +8,20 @@ SyntroEdisonNav uses the RTIMULib IMU library. Check out https://github.com/rich
 
 Note that SyntroEdisonNav uses I2C1 to connect to the IMU chip.
 
-There is no way of performing magnetometer calibration at the moment. This will be in a future release.
+### Calibration
+
+It is very important that at least min/max magnetometer calibration is performed otherwise very poor fusion results will be obtained. The RTIMULib repo contains a program called RTIMULibCal that can be used to generate calibration data. RTIMULibCal can be built natively on the Edison itself.
+
+Since the Edison does not normally have git available, use wget to copy the RTIMULib repo:
+
+    wget https://github.com/richards-tech/RTIMULib/archive/master.zip --no-check-certificate
+    unzip master.zip
+    
+This will create the repo in RTIMULib-master. Navigate to the RTIMULibCal directory and built it:
+
+    make
+    make install
+    
+Note that although RTIMULibCal supports ellipsoid fit magnetometer calibration, octave isn't normally present on the Edison and so cannot be successfully completed. Min/max magnetometer and accelerometer calibration can be performed however. The program is self-documenting: read the instructions when a calibration mode is selected to see how to use it.
+
+RTIMULibCal generates a file RTIMULib.ini in the working directory. This should be copied to the working directory of any other program that needs to use it (for example, wherever SyntroEdisonNav runs). An existing RTIMULib.ini file can also be copied into RTIMULibCal's working directory and this will be updated with calibration data without affecting other settings. 
