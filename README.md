@@ -6,6 +6,10 @@ Check out www.richards-tech.com for more details.
 
 ## Release history
 
+### November 3 2014 - 1.0.1
+
+Fixed error in IMUThread.
+
 ### October 31 2014 - 1.0.0
 
 Intial release.

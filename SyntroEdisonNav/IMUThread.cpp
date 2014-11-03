@@ -22,7 +22,7 @@
 #include "RTFusion.h"
 #include "RTIMU.h"
 
-#include "SyntroEdisonNavConsole.h"
+#include "SyntroEdisonNav.h"
 
 IMUThread::IMUThread() : SyntroThread("IMUThread", "IMUThread")
 {

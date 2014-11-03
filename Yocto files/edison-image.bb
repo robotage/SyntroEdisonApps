@@ -107,11 +107,12 @@ IMAGE_INSTALL += "tzdata"
 
 # SWIG
 IMAGE_INSTALL += "swig"
+IMAGE_INSTALL += "pulseaudio"
 IMAGE_INSTALL += "packagegroup-core-qt4e"
 IMAGE_INSTALL += "bison"
 IMAGE_INSTALL += "coreutils"
 IMAGE_INSTALL += "alsa-lib"
-
+IMAGE_INSTALL += "git"
 
 
 
